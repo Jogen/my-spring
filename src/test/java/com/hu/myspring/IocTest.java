@@ -20,6 +20,6 @@ public class IocTest {
         beanContainer.loadBeans("com.hu.myspring");
         new Ioc().doIoc();
         DoodleController controller = (DoodleController) beanContainer.getBean(DoodleController.class);
-        controller.hello();
+        controller.helloForAspect();
     }
 }

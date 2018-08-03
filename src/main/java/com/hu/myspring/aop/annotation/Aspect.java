@@ -15,6 +15,11 @@ public @interface Aspect {
     /**
      * 目标代理类的范围
      * @return
+     *//*
+    Class<? extends Annotation> target();*/
+
+    /**
+     * 切点表达式
      */
-    Class<? extends Annotation> target();
+    String pointcut() default "";
 }

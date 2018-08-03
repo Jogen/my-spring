@@ -17,7 +17,7 @@ public class DoodleController {
     @Autowired
     private DoodleService doodleService;
 
-    public void hello() {
+    public void helloForAspect() {
         log.info(doodleService.helloWorld());
     }
 }
