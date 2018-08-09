@@ -1,6 +1,7 @@
 package com.hu.myspring.mvc;
 
 import com.alibaba.fastjson.JSON;
+import com.hu.myspring.Doodle;
 import com.hu.myspring.core.BeanContainer;
 import com.hu.myspring.mvc.annotation.ResponseBody;
 import com.hu.myspring.mvc.bean.ModelAndView;
@@ -129,7 +130,8 @@ public class ResultRender {
                 throw new RuntimeException("返回类型不合法");
             }
             try {
-                request.getRequestDispatcher("/templates/" + path).forward(request, response);
+//                request.getRequestDispatcher("/templates/" + path).forward(request, response);
+                request.getRequestDispatcher(Doodle.getConfiguration().getResourcePath() + path).forward(request, response);
             } catch (Exception e) {
                 log.error("转发请求失败", e);
                 // TODO 异常统一处理
